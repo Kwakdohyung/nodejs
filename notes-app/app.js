@@ -1,2 +1,8 @@
-fs.writeFileSync('notes.txt', 'This file was created by Node.js!');
-// 첫번째 인자는 파일 이름, 두번째는 데이터
+const validator = require('validator');
+const getNotes = require('./notes.js');
+
+const msg = getNotes();
+
+console.log(msg);
+
+console.log(validator.isURL('https/mead.io'));
